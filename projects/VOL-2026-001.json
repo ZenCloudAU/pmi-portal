@@ -1,0 +1,25 @@
+{
+  "_comment": "Demo project seed — Volvo Tri-Dealership Infrastructure Migration",
+  "_note": "Populate analysis field by running the intake flow with src/data/demos.ts VOLVO_DEMO. This file is a schema reference only.",
+  "id": "VOL-2026-001",
+  "createdAt": "2026-06-02T09:00:00+10:00",
+  "updatedAt": "2026-06-02T09:00:00+10:00",
+  "mandate": {
+    "engagementName": "Tri-Dealership Infrastructure Migration",
+    "client": "Volvo Car Corporation AU",
+    "type": "Project",
+    "budget": "under100k",
+    "duration": "under1month",
+    "sector": "private",
+    "location": "Wacol, QLD",
+    "startType": "Immediate",
+    "mandate": "Volvo has recently acquired 3 automotive dealerships across South-East Queensland. Each dealership runs independent legacy IT infrastructure (network, servers, endpoints) with no standardisation. The client requires a Project Manager to govern the full IT infrastructure migration across all 3 sites to align with Volvo corporate standards.",
+    "additionalContext": "PM must produce weekly status reports for IT Director sponsor. Scope creep is a known risk. Full closure documentation required."
+  },
+  "analysis": null,
+  "stakeholders": [],
+  "risks": [],
+  "deliverables": [],
+  "charterFields": {},
+  "notes": ""
+}

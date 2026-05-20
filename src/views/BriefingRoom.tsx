@@ -1,0 +1,1 @@
+export { BriefingRoom } from './stubs'
