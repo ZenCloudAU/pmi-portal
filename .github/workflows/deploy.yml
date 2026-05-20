@@ -27,16 +27,6 @@ jobs:
 
       - run: npm ci
 
-      - name: Verify secret reaches build
-        run: |
-          if [ -z "$VITE_ANTHROPIC_API_KEY" ]; then
-            echo "ERROR: VITE_ANTHROPIC_API_KEY is empty — secret not passed"
-            exit 1
-          fi
-          echo "Key length: ${#VITE_ANTHROPIC_API_KEY} chars (value masked)"
-        env:
-          VITE_ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-
       - run: npm run build
         env:
           VITE_ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
