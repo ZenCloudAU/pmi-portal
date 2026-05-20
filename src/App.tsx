@@ -34,8 +34,9 @@ export default function App() {
       setAnalysis(result)
       setScreen('briefing')
     } catch (err) {
-      console.error(err)
-      setError('Analysis failed — check API connection and retry.')
+      const msg = err instanceof Error ? err.message : String(err)
+      console.error('analyzeMandate failed:', msg)
+      setError(`Analysis failed: ${msg}`)
       setScreen('intake')
     }
   }

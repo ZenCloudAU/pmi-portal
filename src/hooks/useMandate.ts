@@ -30,21 +30,24 @@ export async function analyzeMandate(mandate: MandateInput): Promise<MandateAnal
     },
     body: JSON.stringify({
       model: 'claude-sonnet-4-6',
-      max_tokens: 1000,
+      max_tokens: 4096,
       system: PMI_SYSTEM_PROMPT,
       messages: [{ role: 'user', content: userMessage }],
     }),
   })
 
   if (!response.ok) {
-    throw new Error(`API error: ${response.status}`)
+    const body = await response.text()
+    throw new Error(`API ${response.status}: ${body}`)
   }
 
   const data = await response.json()
   const text: string = data.content?.find((b: { type: string }) => b.type === 'text')?.text ?? ''
 
-  // Strip any markdown fences that may leak through
   const clean = text.replace(/```json|```/g, '').trim()
-  const parsed = JSON.parse(clean) as MandateAnalysis
-  return parsed
+  try {
+    return JSON.parse(clean) as MandateAnalysis
+  } catch {
+    throw new Error(`JSON parse failed. Raw response: ${clean.slice(0, 200)}`)
+  }
 }
