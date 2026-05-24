@@ -1,12 +1,14 @@
-# PMI Portal
+# PMO Portal
 
-PMI Portal is an AI-assisted project and programme mobilisation portal for intake, governance, delivery planning, execution visibility, and architecture-led delivery control.
+PMO Portal is a lightweight delivery mobilisation and governance workspace for intake, planning, risks, decisions, artefacts, executive visibility, and architecture-led delivery control.
 
 ## Purpose
 
-PMI Portal exists to turn an engagement mandate into a structured delivery starting point. It helps capture the initial context, classify the work, identify governance needs, and create a practical workspace for delivery planning and control.
+PMO Portal exists to help organisations turn an engagement mandate into a structured delivery starting point. It captures initial context, surfaces mobilisation needs, identifies governance checkpoints, and creates a practical workspace for delivery planning and control.
 
-The portal supports the StudioSix delivery ecosystem by connecting architecture decisions to project and programme mobilisation, governance checkpoints, and execution visibility.
+The portal supports the StudioSix delivery ecosystem by connecting architecture decisions to project and programme mobilisation, artefact transparency, governance checkpoints, risk visibility, and executive reporting.
+
+It is designed for organisations that need delivery control and transparency without adopting heavyweight enterprise PMO platforms early in their maturity journey.
 
 ## Who It Is For
 
@@ -18,7 +20,7 @@ The portal supports the StudioSix delivery ecosystem by connecting architecture 
 
 ## What It Does
 
-Based on the current repository content, PMI Portal provides:
+Based on the current repository content, PMO Portal provides:
 
 - Engagement mandate intake for project, programme, or portfolio-component work.
 - AI-assisted mandate analysis using the configured Anthropic integration.
@@ -35,25 +37,25 @@ Intake -> Analyzing -> Briefing Room -> Workspace
 
 ## Live Demo
 
-[PMI Portal live demo](https://zencloudau.github.io/pmi-portal/)
+[PMO Portal live demo](https://zencloudau.github.io/pmi-portal/)
 
 ## Screenshots
 
 ### Delivery mobilisation overview
 
-![PMI Portal delivery mobilisation overview](docs/screenshots/pmi-portal-home.png)
+![PMO Portal delivery mobilisation overview](docs/screenshots/pmi-portal-home.png)
 
 ### Intake and mobilisation
 
-![PMI Portal intake and mobilisation](docs/screenshots/pmi-portal-intake.png)
+![PMO Portal intake and mobilisation](docs/screenshots/pmi-portal-intake.png)
 
 ### Governance and execution visibility
 
-![PMI Portal governance and execution visibility](docs/screenshots/pmi-portal-dashboard.png)
+![PMO Portal governance and execution visibility](docs/screenshots/pmi-portal-dashboard.png)
 
 ## How It Fits the StudioSix / VAF Ecosystem
 
-PMI Portal is the delivery mobilisation and governance layer of the StudioSix ecosystem.
+PMO Portal is the delivery mobilisation and governance layer of the StudioSix ecosystem.
 
 It fits the delivery chain as:
 
@@ -65,10 +67,10 @@ Architecture -> Governance -> Mobilisation -> Artefacts -> Execution -> Delivery
 - **Velocity Architecture Framework** provides architecture and governance framing.
 - **VAF-SA** provides the solution architecture practitioner method.
 - **EA Artefact Generator** supports structured architecture artefact production.
-- **PMI Portal** connects architecture intent to mobilisation, governance, planning, and execution visibility.
+- **PMO Portal** connects architecture intent to mobilisation, governance, planning, artefact transparency, and execution visibility.
 - **Agentic Cert** and **Learn with Claude** support learning, certification, and builder capability around the ecosystem.
 
-PMI Portal is not positioned as a replacement for professional project management judgement. It is a structured support tool for intake, mobilisation, and governance-oriented delivery control.
+PMO Portal is not positioned as a replacement for professional project management judgement or mature enterprise PMO platforms. It is a prototype-stage, standards-informed support tool for intake, mobilisation, governance-oriented delivery control, and executive visibility.
 
 ## Tech Stack
 
@@ -114,7 +116,7 @@ Add the required Anthropic API key value to the local `.env` file. Do not commit
 
 Prototype.
 
-The repository has a working React/Vite structure, typed application flow, GitHub Pages deployment configuration, and a live public URL. It is not yet product-ready because it still needs clearer screenshots, stronger public packaging, safer production API handling, and evidence of the full workflow operating reliably outside demo use.
+The repository has a working React/Vite structure, typed application flow, GitHub Pages deployment configuration, and a live public URL. It is not production-ready. It still needs safer production API handling, clearer persistence/export behaviour, and evidence of the full workflow operating reliably outside demo use.
 
 ## Roadmap
 
@@ -124,7 +126,7 @@ Near-term improvements:
 - Clarify demo-only versus configured-AI behaviour on the public site.
 - Add export/import handling for project files.
 - Strengthen project charter, risk register, stakeholder, and deliverables outputs.
-- Define the handoff contract between PMI Portal, VAF, and EA Artefact Generator.
+- Define the handoff contract between PMO Portal, VAF, and EA Artefact Generator.
 - Add client-safe case study examples without exposing confidential delivery information.
 
 ## Security and Data Notes

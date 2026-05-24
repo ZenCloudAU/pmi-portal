@@ -82,7 +82,7 @@ function WCharter({ mandate, analysis }: { mandate: MandateInput; analysis: Mand
     { k: 'constraints', label: 'Constraints', ph: 'Budget, timeline, resource, regulatory, technical, and organisational constraints...' },
     { k: 'assumptions', label: 'Assumptions', ph: 'What is assumed to be true for this engagement to be viable...' },
     { k: 'risks', label: 'High-Level Risks (Summary)', ph: `Seed from mandate analysis: ${(analysis.riskCategories ?? []).slice(0, 4).join(', ')}...` },
-    { k: 'authority', label: 'PM Authority', ph: 'What authority does the PM hold? What requires escalation? Who is the accountable sponsor?' },
+    { k: 'authority', label: 'Delivery Authority', ph: 'What authority exists? What requires escalation? Who is the accountable sponsor?' },
   ]
 
   return (
@@ -379,7 +379,7 @@ function WBudget({ mandate, analysis }: { mandate: MandateInput; analysis: Manda
         <SectionHead>Change Control — Cost Thresholds (Define on Day 1)</SectionHead>
         <div className="grid grid-cols-3 gap-3">
           {[
-            { tier: 'PM Authority',    desc: 'Approve without escalation', ph: 'e.g. < 5% variance or < $X' },
+            { tier: 'Delivery Lead Authority',    desc: 'Approve without escalation', ph: 'e.g. < 5% variance or < $X' },
             { tier: 'Sponsor Approval',desc: 'Requires sponsor sign-off',  ph: 'e.g. 5–15% variance' },
             { tier: 'Steering / Board',desc: 'Full governance review',      ph: 'e.g. > 15% or > $X' },
           ].map(t => (
@@ -402,9 +402,9 @@ function WMeetings({ analysis }: { analysis: MandateAnalysis }) {
     { name: 'Kick-Off',             freq: 'Once — Week 1',                          desc: 'All stakeholders · Charter briefing · Mandate alignment · Governance establishment' },
     { name: 'Daily Standup',        freq: 'Daily · 08:00',                          desc: 'Core team · Status, blockers, decisions, actions' },
     { name: 'Sponsor Status Report',freq: analysis.governance?.reporting || 'Weekly',desc: `${analysis.governance?.model || 'Sponsor'} · Progress, risks, issues, decisions required` },
-    { name: 'Risk Review',          freq: 'Fortnightly',                            desc: 'PM + leads · Risk register walk-through · Update scores and mitigations' },
+    { name: 'Risk Review',          freq: 'Fortnightly',                            desc: 'Delivery leads · Risk register walk-through · Update scores and mitigations' },
     { name: analysis.classification === 'Program' ? 'Governance Board' : 'Steering Review', freq: analysis.classification === 'Program' ? 'Monthly' : 'As required', desc: `${analysis.governance?.model} · Escalation decisions · Change requests · Budget approvals` },
-    { name: 'Go/No-Go Gate Reviews',freq: 'Per milestone',                          desc: 'PM + sponsor · Gate criteria met? · Proceed, pause, or re-plan' },
+    { name: 'Go/No-Go Gate Reviews',freq: 'Per milestone',                          desc: 'Delivery lead + sponsor · Gate criteria met? · Proceed, pause, or re-plan' },
     { name: 'Lessons Learned',      freq: 'At closure',                             desc: 'All stakeholders · Knowledge capture · Continuous improvement register' },
   ]
 
@@ -549,7 +549,7 @@ export function Workspace({ mandate, analysis, onReset }: WorkspaceProps) {
         <aside className="w-52 flex-shrink-0 border-r border-slate-200 flex flex-col bg-slate-50">
           <div className="p-4 border-b border-slate-200">
             <div className="text-xs font-mono text-sky-700 tracking-widest">DELIVERY CONTROL</div>
-            <div className="text-sm font-black text-slate-950 tracking-widest font-display">PMI PORTAL</div>
+            <div className="text-sm font-black text-slate-950 tracking-widest font-display">PMO PORTAL</div>
           </div>
           <div className="p-3 border-b border-slate-200 bg-sky-50">
             <div className="text-xs font-mono text-sky-700 truncate">{mandate.client}</div>

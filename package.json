@@ -1,7 +1,7 @@
 {
   "name": "pmi-portal",
   "version": "0.1.0",
-  "description": "AI-assisted project and programme mobilisation portal for governance, planning, execution visibility, and architecture-led delivery control.",
+  "description": "AI-assisted PMO and delivery mobilisation portal for governance, planning, risk visibility, artefact transparency, and architecture-led execution control.",
   "private": true,
   "scripts": {
     "dev": "vite",

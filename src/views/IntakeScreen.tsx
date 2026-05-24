@@ -63,7 +63,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze, onLoadDemo, error
         <div>
           <div className="text-xs font-mono text-sky-700 tracking-widest">DELIVERY MOBILISATION PORTAL</div>
           <div className="text-lg font-black text-slate-950 tracking-widest font-display">
-            PMI PORTAL
+            PMO PORTAL
           </div>
         </div>
         <div className="text-right text-xs font-mono text-slate-500 leading-relaxed">
@@ -82,12 +82,11 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze, onLoadDemo, error
                 Turn architecture intent into governed delivery execution.
               </h1>
               <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
-                PMI Portal helps delivery leaders capture a mandate, assess mobilisation readiness,
-                define governance checkpoints, and create an execution brief grounded in architecture
-                decisions, risks, artefacts, and stakeholder visibility.
+                A lightweight mobilisation and delivery-control workspace for intake, governance,
+                risks, decisions, artefacts, and executive visibility.
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
-                {['Delivery mobilisation', 'Governance checkpoints', 'Risk and decision visibility', 'Executive reporting'].map(t => (
+                {['Delivery mobilisation', 'Governance checkpoints', 'Risk and decision visibility', 'Artefact transparency', 'Executive reporting'].map(t => (
                   <Badge key={t} label={t} variant="blue" />
                 ))}
               </div>
