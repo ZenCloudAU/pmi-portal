@@ -1,7 +1,7 @@
 {
   "name": "pmi-portal",
   "version": "0.1.0",
-  "description": "AI-assisted PMO and delivery mobilisation portal for governance, planning, risk visibility, artefact transparency, and architecture-led execution control.",
+  "description": "AI-assisted PMO and VAF delivery workspace for intake, architecture framing, governance, artefact lifecycle control, client transparency, and execution visibility.",
   "private": true,
   "scripts": {
     "dev": "vite",

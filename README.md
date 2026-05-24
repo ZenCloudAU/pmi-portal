@@ -1,69 +1,129 @@
 # PMO Portal
 
-PMO Portal is the StudioSix client engagement workspace for delivery mobilisation, governance, artefact generation, execution visibility, controlled artefact sharing, and handover.
+PMO Portal is a VAF-aligned StudioSix client engagement workspace for architecture framing, delivery mobilisation, governance, artefact lifecycle control, execution visibility, client transparency, and handover.
 
-## Purpose
+Short version:
 
-PMO Portal exists to turn a client mandate into a governed delivery workspace.
+```text
+From architecture intent to governed delivery execution.
+```
 
-It helps capture the engagement context, assess the scale and type of work, select the right project or programme artefact set, draft delivery outputs, track review status, and provide controlled visibility from mobilisation through handover.
-
-Core operating principle:
+Operating principle:
 
 ```text
 AI drafts. Architect reviews. Client receives controlled artefacts.
 ```
 
-The public repository and live demo are for product demonstration only. Real engagement artefacts must be exported to a private client workspace, private repository, or approved client document store.
+## Purpose
+
+PMO Portal connects architecture intent, solution decisions, governance checkpoints, artefact generation, delivery execution, and client transparency into one controlled engagement workspace.
+
+It supports the StudioSix engagement model by turning a client mandate into a structured delivery workspace: architecture context, VAF decision governance, VAF-SA solution shaping, scale assessment, artefact catalogue, mobilisation controls, governance cadence, executive visibility, and handover records.
+
+The public demo is for demonstration only. Real client artefacts must be exported to a private client workspace, private repository, or approved client document store.
 
 ## Who It Is For
 
-- StudioSix and ZenCloud engagement leads shaping client delivery.
-- Project managers and programme managers starting a new engagement.
-- Delivery leads who need mobilisation structure, governance checkpoints, and executive reporting.
-- Enterprise architects and solution architects who need delivery execution to stay connected to architecture intent.
-- Sponsors and reviewers who need visibility across decisions, risks, artefacts, and handover.
+- StudioSix and ZenCloud engagement leads.
+- Enterprise architects and solution architects connecting architecture decisions to delivery execution.
+- Project managers and programme managers mobilising governed delivery.
+- Delivery leads who need artefact control, RAID visibility, and executive reporting.
+- Sponsors and reviewers who need visibility across decisions, risks, artefacts, status, and handover.
 
 ## What It Generates
 
-PMO Portal models a controlled workspace across:
+PMO Portal models a controlled client workspace across:
 
 - Client mandate intake.
+- Architecture framing.
 - Engagement scale assessment.
-- Scale-based artefact set selection.
+- VAF/VAF-SA artefact selection.
+- Scale-based artefact catalogue.
 - Delivery mobilisation brief.
 - Governance model.
 - RAID and decision control.
 - Milestone plan.
 - Executive snapshot.
-- Controlled artefact catalogue.
-- Client handover pack.
+- Client visibility model.
+- Controlled handover pack.
 
-The intended workflow is:
+Strategic workflow:
 
 ```text
 Client mandate
+-> Architecture framing
+-> VAF decision governance
+-> VAF-SA solution shaping
 -> Engagement scale assessment
--> Artefact set selection
+-> Artefact catalogue
 -> AI-assisted draft generation
--> Human review
--> Controlled private storage
--> Client-visible sharing
--> Governance updates
--> Handover pack
+-> Human architecture review
+-> Delivery mobilisation
+-> PMO governance
+-> Client-visible artefacts
+-> Controlled handover
 ```
 
-## Scale-Based Artefact Sets
+## Velocity Architecture Framework and VAF-SA Linkage
 
-Small project artefacts include the mandate brief, delivery mobilisation brief, scope and outcomes summary, stakeholder map, simple delivery plan, RAID log, decision log, action register, architecture notes, status reporting, completion checklist, and handover summary.
+PMO Portal operationalises Velocity Architecture Framework artefacts into delivery control.
 
-Medium project artefacts add project charter, benefits summary, governance model, RACI and decision rights, milestone plan, dependency register, change control, architecture decision records, solution architecture summary, steering pack, budget summary, acceptance plan, readiness checklist, handover pack, and lessons learned.
+- **Velocity Architecture Framework** provides the architecture and decision governance method.
+- **VAF-SA** provides the solution architecture practitioner method.
+- **EA Artefact Generator** supports structured architecture and governance artefact production.
+- **PMO Portal** turns the mandate, architecture intent, and solution guardrails into delivery mobilisation, governance, artefact control, client transparency, and handover records.
 
-Large programme artefacts add programme mandate, programme charter, business case summary, benefits realisation, roadmap, workstream structure, steering and design authority terms of reference, integrated master plan, resource and vendor plans, architecture governance pack, enterprise and solution architecture packs, security/risk/compliance summary, benefits dashboard, executive and workstream status reports, exception reporting, transition plan, operating model impact, closure report, residual risk register, and next phase recommendations.
+Architecture flow:
+
+```text
+Architecture intent
+-> Architecture decisions
+-> Solution guardrails
+-> Delivery mobilisation
+-> Governance model
+-> Execution control
+-> Handover records
+```
+
+## Workspace Modules
+
+The current demo workspace includes:
+
+- Overview.
+- Intake.
+- Architecture Framing.
+- Scale Assessment.
+- Artefact Catalogue.
+- Governance.
+- RAID & Decisions.
+- Milestones.
+- Executive Snapshot.
+- Client Visibility.
+- Handover Pack.
+- Security & Storage.
+
+## Small / Medium / Large Artefact Sets
+
+Small project artefacts include mandate intake, architecture intent, delivery mobilisation, scope/outcomes, stakeholder map, simple delivery plan, RAID log, decision log, action register, architecture notes, weekly status, completion checklist, and handover summary.
+
+Medium project artefacts add project charter, benefits summary, governance model, RACI and decision rights, milestone plan, dependency register, change control, architecture decision records, solution architecture summary, artefact register, communications plan, steering pack, budget summary, test and acceptance plan, readiness checklist, handover pack, and lessons learned.
+
+Large programme artefacts add programme mandate, architecture intent, programme charter, business case summary, target outcomes, benefits realisation, roadmap, workstream structure, programme governance, steering and design authority terms, decision authority matrix, integrated master plan, resource/vendor plans, architecture governance pack, enterprise and solution architecture packs, security/risk/compliance summary, benefits dashboard, executive/workstream reports, exception reporting, transition plan, operating model impact, closure report, residual risk register, and next phase recommendations.
+
+## Artefact Catalogue Categories
+
+Artefacts are grouped as:
+
+- Architecture artefacts.
+- Solution architecture artefacts.
+- Delivery governance artefacts.
+- Execution control artefacts.
+- Client reporting artefacts.
+- Handover artefacts.
+
+Each artefact record shows name, category, purpose, required/optional status, owner, lifecycle status, visibility, timing, version, client-visible flag, linked decisions, and linked risks.
 
 ## Controlled Artefact Lifecycle
-
-PMO Portal treats artefacts as controlled delivery records, not one-off generated text.
 
 Lifecycle states:
 
@@ -71,19 +131,11 @@ Lifecycle states:
 Required -> Draft -> In review -> Approved -> Shared -> Locked -> Handover
 ```
 
-Artefact records show:
+Generation modes:
 
-- Artefact name.
-- Purpose.
-- Required or optional status.
-- Owner.
-- Lifecycle status.
-- Visibility state.
-- Timing.
-- Version.
-- Client-visible flag.
-- Linked decisions.
-- Linked risks.
+- Preview.
+- Generate draft.
+- Export controlled artefact.
 
 Generated artefacts are draft outputs. They require human review before being shared, locked, or used as delivery records.
 
@@ -91,22 +143,9 @@ Generated artefacts are draft outputs. They require human review before being sh
 
 Every engagement should create a visible trail of artefacts, decisions, risks, assumptions, governance checkpoints, and delivery outputs. Clients can see what is being produced, why decisions were made, and where execution stands.
 
-Client-visible items can include:
+Client-visible items can include approved artefacts, shared decisions, RAID summary, milestone status, executive updates, and the handover pack.
 
-- Approved artefacts.
-- Shared decisions.
-- RAID summary.
-- Milestone status.
-- Executive updates.
-- Handover pack.
-
-Internal-only items include:
-
-- Working drafts.
-- Private notes.
-- Sensitive analysis.
-- Internal prompts.
-- Unapproved artefacts.
+Internal-only items include working drafts, private notes, sensitive analysis, internal prompts, and unapproved artefacts.
 
 ## Security and Artefact Storage Model
 
@@ -122,13 +161,13 @@ Rules:
 - The public GitHub repo contains source code, templates, and fictional/demo examples only.
 - No real client mandates, risks, decisions, reports, or generated artefacts should be committed to the public repo.
 
-Current export model:
+Storage workflow:
 
 ```text
-Generate -> Preview -> Export -> Store privately
+Generate -> Preview -> Review -> Export -> Store privately -> Share authorised artefacts -> Lock records
 ```
 
-Potential controlled destinations include Markdown, PDF, Word, CSV, private Git repositories, SharePoint / OneDrive, and approved client document stores.
+Potential export destinations include Markdown, PDF, Word, CSV, private Git repositories, SharePoint / OneDrive, and approved client document stores. These are modelled as workflow targets only; private storage integrations are not implemented in the public demo.
 
 ## Live Demo
 
@@ -136,9 +175,13 @@ Potential controlled destinations include Markdown, PDF, Word, CSV, private Git 
 
 ## Screenshots
 
-### Delivery mobilisation intake
+### PMO workspace
 
-![PMO Portal delivery mobilisation intake](docs/screenshots/pmo-portal-home.png)
+![PMO Portal workspace](docs/screenshots/pmo-portal-workspace.png)
+
+### Architecture framing
+
+![PMO Portal architecture framing](docs/screenshots/pmo-portal-architecture-framing.png)
 
 ### Controlled artefact catalogue
 
@@ -154,18 +197,12 @@ PMO Portal is the delivery mobilisation and execution visibility layer in the St
 
 - **ZenCloud Advisory** is the parent advisory practice for enterprise architecture, cloud, security, AI, governance, and delivery leadership.
 - **StudioSix** is the architecture-led AI delivery studio of ZenCloud.
-- **Velocity Architecture Framework** provides the architecture and decision governance method.
-- **VAF-SA** provides the solution architecture practitioner method.
+- **Velocity Architecture Framework** provides architecture and decision governance.
+- **VAF-SA** provides solution architecture practitioner method.
 - **EA Artefact Generator** supports structured architecture and governance artefact production.
-- **PMO Portal** turns the mandate and architecture intent into delivery mobilisation, artefact control, execution visibility, and handover.
+- **PMO Portal** provides delivery execution control, client transparency, and handover records.
 
-Strategic workflow:
-
-```text
-Architecture -> Governance -> Mobilisation -> Artefacts -> Execution -> Delivery visibility -> Client transparency -> Handover
-```
-
-PMO Portal is standards-informed and is not formally certified by PMI. PMBOK 7 and The Standard for Program Management can inform governance language, but human accountability and architectural judgement remain central.
+PMO Portal is standards-informed and is not formally certified by PMI. PMBOK 7, programme governance, risk, benefits, scheduling, governance, and professional ethics can inform governance language, but human accountability and architectural judgement remain central.
 
 ## Tech Stack
 
@@ -211,7 +248,7 @@ Do not commit local environment files or API keys.
 
 Prototype.
 
-The repository has a working React/Vite structure, a live public demo, typed application flow, and a visible controlled artefact lifecycle model. It is not production-ready and is not a replacement for mature enterprise PMO platforms.
+The repository has a working React/Vite structure, a live public demo, typed application flow, a VAF-aligned workspace layout, and a visible controlled artefact lifecycle model. It is not production-ready and is not a replacement for mature enterprise PMO platforms.
 
 Before production use it would need hardened authentication, private storage, audit controls, tenant separation, data retention rules, secure API handling, and client-approved document repositories.
 
