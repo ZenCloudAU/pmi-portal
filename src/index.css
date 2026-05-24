@@ -10,8 +10,8 @@
   }
 
   body {
-    background-color: #060D18;
-    color: #D1D5DB;
+    background-color: #F8FAFC;
+    color: #0F172A;
     font-family: 'DM Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -27,7 +27,7 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #1A2840;
+    background: #CBD5E1;
     border-radius: 2px;
   }
 }

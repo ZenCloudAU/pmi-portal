@@ -5,12 +5,12 @@ import type { ReactNode } from 'react'
 type BadgeVariant = 'amber' | 'red' | 'blue' | 'green' | 'purple' | 'gray'
 
 const BADGE_STYLES: Record<BadgeVariant, string> = {
-  amber:  'bg-amber-500/15 text-amber-400 border-amber-500/30',
-  red:    'bg-red-500/15 text-red-400 border-red-500/30',
-  blue:   'bg-blue-500/15 text-blue-400 border-blue-500/30',
-  green:  'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
-  purple: 'bg-purple-500/15 text-purple-400 border-purple-500/30',
-  gray:   'bg-white/5 text-gray-500 border-white/10',
+  amber:  'bg-amber-50 text-amber-700 border-amber-200',
+  red:    'bg-red-50 text-red-700 border-red-200',
+  blue:   'bg-sky-50 text-sky-700 border-sky-200',
+  green:  'bg-emerald-50 text-emerald-700 border-emerald-200',
+  purple: 'bg-violet-50 text-violet-700 border-violet-200',
+  gray:   'bg-slate-50 text-slate-600 border-slate-200',
 }
 
 export function Badge({ label, variant = 'gray' }: { label: string; variant?: BadgeVariant }) {
@@ -25,7 +25,7 @@ export function Badge({ label, variant = 'gray' }: { label: string; variant?: Ba
 
 export function SectionHead({ children }: { children: ReactNode }) {
   return (
-    <div className="text-xs font-mono tracking-widest text-gray-600 uppercase mb-3">
+    <div className="text-xs font-mono tracking-widest text-slate-500 uppercase mb-3">
       {children}
     </div>
   )
@@ -46,8 +46,8 @@ export function Card({
     <div
       className={`border rounded-lg ${
         accent
-          ? 'border-amber-500/25 bg-amber-500/5'
-          : 'border-[#1A2840] bg-[#0A1523]/80'
+          ? 'border-sky-200 bg-sky-50/80'
+          : 'border-slate-200 bg-white shadow-sm'
       } ${className}`}
     >
       {children}
@@ -70,11 +70,11 @@ export function FieldInput({
 }) {
   return (
     <div>
-      <label className="block text-xs font-mono tracking-widest text-gray-600 uppercase mb-1.5">
+      <label className="block text-xs font-mono tracking-widest text-slate-500 uppercase mb-1.5">
         {label}
       </label>
       <input
-        className="w-full bg-[#0A1523] border border-[#1A2840] rounded px-3 py-2 text-sm text-white placeholder-gray-700 focus:outline-none focus:border-amber-500/40 transition-colors"
+        className="w-full bg-white border border-slate-200 rounded px-3 py-2 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition-colors"
         placeholder={placeholder}
         value={value}
         onChange={e => onChange(e.target.value)}
@@ -98,11 +98,11 @@ export function FieldSelect({
 }) {
   return (
     <div>
-      <label className="block text-xs font-mono tracking-widest text-gray-600 uppercase mb-1.5">
+      <label className="block text-xs font-mono tracking-widest text-slate-500 uppercase mb-1.5">
         {label}
       </label>
       <select
-        className="w-full bg-[#0A1523] border border-[#1A2840] rounded px-3 py-2 text-sm text-white focus:outline-none focus:border-amber-500/40 transition-colors font-mono"
+        className="w-full bg-white border border-slate-200 rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition-colors"
         value={value}
         onChange={e => onChange(e.target.value)}
       >
