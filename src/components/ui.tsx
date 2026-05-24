@@ -37,13 +37,16 @@ export function Card({
   children,
   className = '',
   accent = false,
+  id,
 }: {
   children: ReactNode
   className?: string
   accent?: boolean
+  id?: string
 }) {
   return (
     <div
+      id={id}
       className={`border rounded-lg ${
         accent
           ? 'border-sky-200 bg-sky-50/80'

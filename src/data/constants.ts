@@ -20,7 +20,7 @@ export const DURATION_MAP: Record<DurationBand, string> = {
   '3yrsplus':    '3+ Years',
 }
 
-// ─── PMI Performance Domains (PMBoK 7th) ──────────────────────────────────────
+// ─── Standards-Informed Performance Domains ───────────────────────────────────
 
 export const PERFORMANCE_DOMAINS = [
   'Stakeholders',
@@ -33,7 +33,7 @@ export const PERFORMANCE_DOMAINS = [
   'Uncertainty',
 ] as const
 
-// ─── PMBoK 7th — 12 Principles ────────────────────────────────────────────────
+// ─── Standards-Informed Delivery Principles ───────────────────────────────────
 
 export const PMI_PRINCIPLES = [
   'Be a diligent, respectful, and caring steward',
@@ -75,7 +75,7 @@ export const RISK_COLORS: Record<string, string> = {
   Low:      '#22C55E',
 }
 
-// ─── PMI Prompt (system message for Claude API) ───────────────────────────────
+// ─── Delivery Mobilisation Prompt (system message for Claude API) ─────────────
 
 export const PMI_SYSTEM_PROMPT = `You are a senior delivery mobilisation and governance advisor using PMBOK 7, The Standard for Program Management, risk, benefits, scheduling, governance, and professional ethics as supporting standards.
 
@@ -91,7 +91,7 @@ Required schema:
     {"domain": "string (all 8 must appear)", "priority": "High" | "Medium" | "Low"}
   ],
   "immediateActions": [
-    {"timing": "Day 1" | "Day 2" | "Days 3-5" | "Week 1" | "Week 2", "action": "specific actionable task", "priority": "Critical" | "High" | "Medium", "basis": "PMI standard this derives from"}
+    {"timing": "Day 1" | "Day 2" | "Days 3-5" | "Week 1" | "Week 2", "action": "specific actionable task", "priority": "Critical" | "High" | "Medium", "basis": "standards-informed governance basis"}
   ],
   "requiredDocuments": [
     {"document": "document name", "due": "Day X or Week X", "priority": "Critical" | "High" | "Medium"}
@@ -106,13 +106,13 @@ Required schema:
   "stakeholderGroups": [
     {"group": "group name", "strategy": "Manage Closely" | "Keep Satisfied" | "Keep Informed" | "Monitor"}
   ],
-  "tailoring": "specific PMI tailoring guidance for this context",
+  "tailoring": "specific governance and delivery tailoring guidance for this context",
   "programNotes": "programme governance guidance if Program classification, otherwise null",
   "principles": ["relevant standards-informed delivery principle"]
 }
 
 Rules:
-- All 8 PMBoK 7th performance domains must appear (Stakeholders, Team, Development Approach & Life Cycle, Planning, Project Work, Delivery, Measurement, Uncertainty).
+- All 8 standards-informed performance domains must appear (Stakeholders, Team, Development Approach & Life Cycle, Planning, Project Work, Delivery, Measurement, Uncertainty).
 - Minimum 10 immediateActions spanning Day 1 through Week 2.
 - Minimum 10 requiredDocuments with realistic due dates.
 - Minimum 6 riskCategories seeded from the mandate context.
