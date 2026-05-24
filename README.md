@@ -1,6 +1,6 @@
 # PMO Portal
 
-PMO Portal is a VAF-aligned StudioSix client engagement workspace for architecture framing, delivery mobilisation, governance, artefact lifecycle control, execution visibility, client transparency, and handover.
+PMO Portal is a module-based VAF-aligned StudioSix client engagement workspace for architecture framing, delivery mobilisation, governance, artefact lifecycle control, execution visibility, client transparency, and handover.
 
 Short version:
 
@@ -19,6 +19,8 @@ AI drafts. Architect reviews. Client receives controlled artefacts.
 PMO Portal connects architecture intent, solution decisions, governance checkpoints, artefact generation, delivery execution, and client transparency into one controlled engagement workspace.
 
 It supports the StudioSix engagement model by turning a client mandate into a structured delivery workspace: architecture context, VAF decision governance, VAF-SA solution shaping, scale assessment, artefact catalogue, mobilisation controls, governance cadence, executive visibility, and handover records.
+
+The public demo uses a focused workspace layout: one module at a time, summary first, detail on selection.
 
 The public demo is for demonstration only. Real client artefacts must be exported to a private client workspace, private repository, or approved client document store.
 
@@ -87,7 +89,7 @@ Architecture intent
 
 ## Workspace Modules
 
-The current demo workspace includes:
+The current demo workspace uses left-hand navigation to open one module at a time:
 
 - Overview.
 - Intake.
@@ -101,6 +103,8 @@ The current demo workspace includes:
 - Client Visibility.
 - Handover Pack.
 - Security & Storage.
+
+The Overview module is summary-only. It shows engagement summary, current phase, selected scale, artefact completion, top risk, next decision, recommended action, and a compact workflow strip. Detailed intake, architecture framing, artefact catalogue, security, and governance content lives in the relevant module.
 
 ## Small / Medium / Large Artefact Sets
 
@@ -121,7 +125,7 @@ Artefacts are grouped as:
 - Client reporting artefacts.
 - Handover artefacts.
 
-Each artefact record shows name, category, purpose, required/optional status, owner, lifecycle status, visibility, timing, version, client-visible flag, linked decisions, and linked risks.
+The Artefact Catalogue is a working module with search, category filter, status filter, and visibility filter. Each artefact record prioritises name, category, status, visibility, owner, and timing. Secondary metadata includes version, linked decisions, linked risks, client-visible flag, and generation/review mode.
 
 ## Controlled Artefact Lifecycle
 
@@ -175,9 +179,9 @@ Potential export destinations include Markdown, PDF, Word, CSV, private Git repo
 
 ## Screenshots
 
-### PMO workspace
+### PMO workspace overview
 
-![PMO Portal workspace](docs/screenshots/pmo-portal-workspace.png)
+![PMO Portal workspace overview](docs/screenshots/pmo-portal-overview.png)
 
 ### Architecture framing
 
@@ -187,9 +191,9 @@ Potential export destinations include Markdown, PDF, Word, CSV, private Git repo
 
 ![PMO Portal controlled artefact catalogue](docs/screenshots/pmo-portal-artefact-catalogue.png)
 
-### Executive and governance visibility
+### Security and private artefact storage
 
-![PMO Portal executive and governance visibility](docs/screenshots/pmo-portal-executive-snapshot.png)
+![PMO Portal security and storage model](docs/screenshots/pmo-portal-security-storage.png)
 
 ## How It Fits the StudioSix / VAF Ecosystem
 
