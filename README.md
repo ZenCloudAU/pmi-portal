@@ -49,9 +49,9 @@ Intake -> Analyzing -> Briefing Room -> Workspace
 
 ![PMO Portal intake and mobilisation](docs/screenshots/pmi-portal-intake.png)
 
-### Governance and execution visibility
+### Ecosystem, governance, and execution visibility
 
-![PMO Portal governance and execution visibility](docs/screenshots/pmi-portal-dashboard.png)
+![PMO Portal ecosystem, governance, and execution visibility](docs/screenshots/pmi-portal-dashboard.png)
 
 ## How It Fits the StudioSix / VAF Ecosystem
 

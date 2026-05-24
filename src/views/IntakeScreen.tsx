@@ -11,13 +11,54 @@ interface IntakeProps {
   error:      string | null
 }
 
+const WORKFLOW = 'Architecture → Governance → Mobilisation → Artefacts → Execution → Delivery visibility'
+
 const LIFECYCLE = [
   'Architecture',
   'Governance',
   'Mobilisation',
   'Artefacts',
   'Execution',
-  'Visibility',
+  'Delivery visibility',
+]
+
+const ECOSYSTEM_LINKS = [
+  {
+    name: 'ZenCloud Advisory',
+    role: 'Parent advisory practice',
+    desc: 'Parent advisory practice for enterprise architecture, cloud, security, AI, governance, and delivery leadership.',
+    href: 'https://www.zencloud.com.au/',
+  },
+  {
+    name: 'StudioSix',
+    role: 'Client engagement wrapper',
+    desc: 'Architecture-led AI delivery studio and client engagement wrapper.',
+    href: 'https://studiosix.com.au/',
+  },
+  {
+    name: 'Velocity Architecture Framework',
+    role: 'Architecture governance method',
+    desc: 'Architecture and decision governance method.',
+    href: 'https://velocityarchitectureframework.com',
+  },
+  {
+    name: 'VAF-SA',
+    role: 'Solution architecture practice',
+    desc: 'Solution architecture practitioner method.',
+    href: 'https://zencloudau.github.io/vaf-sa/',
+  },
+  {
+    name: 'EA Artefact Generator',
+    role: 'Artefact production layer',
+    desc: 'Artefact production layer for architecture and governance outputs.',
+    href: 'https://ea.velocityarchitecture.com.au/',
+  },
+  {
+    name: 'PMO Portal',
+    role: 'Delivery control workspace',
+    desc: 'Delivery mobilisation, governance, and execution visibility workspace.',
+    href: 'https://zencloudau.github.io/pmi-portal/',
+  },
 ]
 
 const SNAPSHOT_CARDS = [
@@ -61,7 +102,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze, onLoadDemo, error
     <div className="min-h-screen bg-slate-50 flex flex-col text-slate-900">
       <header className="border-b border-slate-200 bg-white/95 px-6 py-4 flex items-center justify-between sticky top-0 z-10 shadow-sm">
         <div>
-          <div className="text-xs font-mono text-sky-700 tracking-widest">DELIVERY MOBILISATION PORTAL</div>
+          <div className="text-xs font-mono text-sky-700 tracking-widest">ZenCloud Advisory · StudioSix Delivery Ecosystem</div>
           <div className="text-lg font-black text-slate-950 tracking-widest font-display">
             PMO PORTAL
           </div>
@@ -84,6 +125,10 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze, onLoadDemo, error
               <p className="text-base text-slate-600 leading-relaxed max-w-2xl">
                 A lightweight mobilisation and delivery-control workspace for intake, governance,
                 risks, decisions, artefacts, and executive visibility.
+              </p>
+              <p className="text-sm text-slate-600 leading-relaxed max-w-2xl mt-4">
+                Part of the StudioSix delivery ecosystem, supported by Velocity Architecture Framework
+                methods, VAF-SA solution architecture practice, and EA Artefact Generator artefact workflows.
               </p>
               <div className="flex flex-wrap gap-2 mt-6">
                 {['Delivery mobilisation', 'Governance checkpoints', 'Risk and decision visibility', 'Artefact transparency', 'Executive reporting'].map(t => (
@@ -113,6 +158,12 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze, onLoadDemo, error
           </div>
 
           <div className="max-w-6xl mx-auto mt-8 rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+            <div className="px-3 pt-2 pb-3 text-xs font-mono text-slate-500 tracking-widest uppercase">
+              {WORKFLOW}
+            </div>
+            <p className="px-3 pb-3 text-sm text-slate-700">
+              Architecture → Governance → Mobilisation → Artefacts → Execution → Delivery visibility
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-6 gap-2">
               {LIFECYCLE.map((step, i) => (
                 <div key={step} className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-3">
@@ -120,6 +171,42 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze, onLoadDemo, error
                   <div className="text-sm font-semibold text-slate-800">{step}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 py-8 border-b border-slate-200 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-5">
+              <div className="text-xs font-mono text-sky-700 tracking-widest uppercase mb-2">
+                How PMO Portal fits the delivery ecosystem
+              </div>
+              <h2 className="text-3xl font-black text-slate-950 leading-none font-display">
+                From advisory direction to visible delivery control.
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+              {ECOSYSTEM_LINKS.map(item => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-lg border border-slate-200 bg-slate-50 p-4 hover:border-sky-300 hover:bg-sky-50 transition-colors"
+                >
+                  <div className="text-xs font-mono text-sky-700 tracking-widest uppercase mb-2">{item.role}</div>
+                  <div className="text-base font-bold text-slate-950">{item.name}</div>
+                  <p className="text-sm text-slate-600 leading-relaxed mt-2">{item.desc}</p>
+                </a>
+              ))}
+            </div>
+            <div className="mt-5 rounded-xl border border-slate-200 bg-sky-50 p-5">
+              <div className="text-sm font-bold text-slate-950 mb-2">Client transparency</div>
+              <p className="text-sm text-slate-700 leading-relaxed">
+                Every engagement creates a visible trail of artefacts, decisions, risks, assumptions,
+                governance checkpoints, and delivery outputs. Clients can see what is being produced,
+                why decisions were made, and where execution stands.
+              </p>
             </div>
           </div>
         </section>
