@@ -46,7 +46,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
     <div className="min-h-screen bg-[#060D18] flex flex-col">
       <header className="border-b border-[#1A2840] px-6 py-3.5 flex items-center gap-4 flex-shrink-0">
         <div className="flex-1">
-          <div className="text-xs font-mono text-amber-500 tracking-widest">PMI MANDATE BRIEFING</div>
+          <div className="text-xs font-mono text-amber-500 tracking-widest">DELIVERY MOBILISATION BRIEF</div>
           <div className="text-sm font-bold text-white font-display" style={{ letterSpacing: '0.04em' }}>
             {mandate.engagementName}
           </div>
@@ -85,7 +85,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
         <Card>
           <div className="px-5 py-3 border-b border-[#1A2840] flex items-center gap-2">
             <Target size={13} className="text-amber-500" />
-            <div className="text-xs font-mono text-amber-500 tracking-widest">DAY 1 ACTION PLAN — YOUR PMI-CERTIFIED MANDATE</div>
+              <div className="text-xs font-mono text-amber-500 tracking-widest">MOBILISATION ACTION PLAN — DAY 1 TO WEEK 2</div>
           </div>
           <div className="divide-y divide-[#1A2840]/50">
             {sorted.map((a, i) => (
@@ -195,11 +195,11 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
 
         {/* Tailoring */}
         <Card className="p-5">
-          <SectionHead>PMI Tailoring Guidance</SectionHead>
+          <SectionHead>Delivery Tailoring Guidance</SectionHead>
           <p className="text-sm text-gray-300 leading-relaxed">{analysis.tailoring}</p>
           {analysis.programNotes && (
             <div className="mt-4 border-t border-[#1A2840] pt-4">
-              <div className="text-xs font-mono text-amber-500 tracking-widest mb-2">Standard for Program Management — 4th Ed.</div>
+              <div className="text-xs font-mono text-amber-500 tracking-widest mb-2">Programme Governance Notes</div>
               <p className="text-sm text-gray-300 leading-relaxed">{analysis.programNotes}</p>
             </div>
           )}

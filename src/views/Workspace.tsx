@@ -23,7 +23,7 @@ function WBriefing({ analysis, mandate }: { analysis: MandateAnalysis; mandate: 
 
   return (
     <div className="space-y-4">
-      <SectionHead>Mandate Briefing Summary</SectionHead>
+      <SectionHead>Delivery Mobilisation Summary</SectionHead>
       <Card accent className="p-5">
         <div className="flex flex-wrap gap-2 mb-3">
           <Badge label={analysis.classification} variant="amber" />
@@ -33,7 +33,7 @@ function WBriefing({ analysis, mandate }: { analysis: MandateAnalysis; mandate: 
         <p className="text-sm text-gray-300 leading-relaxed">{analysis.summary}</p>
       </Card>
       <Card className="p-4">
-        <SectionHead>Priority Day 1–2 Actions</SectionHead>
+        <SectionHead>Priority Mobilisation Actions</SectionHead>
         <div className="space-y-2">
           {day12.map((a, i) => (
             <div key={i} className="flex items-start gap-3">
@@ -50,11 +50,11 @@ function WBriefing({ analysis, mandate }: { analysis: MandateAnalysis; mandate: 
         </div>
       </Card>
       <Card className="p-4">
-        <SectionHead>PMI Tailoring Guidance</SectionHead>
+        <SectionHead>Delivery Tailoring Guidance</SectionHead>
         <p className="text-sm text-gray-400 leading-relaxed">{analysis.tailoring}</p>
         {analysis.programNotes && (
           <div className="mt-4 pt-4 border-t border-[#1A2840]">
-            <div className="text-xs font-mono text-amber-500 tracking-widest mb-2">Standard for Program Management — 4th Ed.</div>
+            <div className="text-xs font-mono text-amber-500 tracking-widest mb-2">Programme Governance Notes</div>
             <p className="text-sm text-gray-400 leading-relaxed">{analysis.programNotes}</p>
           </div>
         )}

@@ -2,15 +2,13 @@ import { useState, useEffect } from 'react'
 import type { MandateInput } from '@/types'
 
 const STEPS = [
-  'Classifying engagement type and complexity...',
-  'Mapping to PMBoK 7th Edition performance domains...',
-  'Applying Standard for Program Management 4th Ed...',
-  'Generating Day 1 action sequence...',
-  'Structuring governance framework...',
-  'Determining required document suite...',
-  'Seeding risk category register...',
-  'Mapping stakeholder engagement strategy...',
-  'Tailoring PMI approach to this context...',
+  'Reading mandate context and architecture intent...',
+  'Classifying delivery scale, complexity, and lifecycle...',
+  'Mapping governance checkpoints and decision authority...',
+  'Building mobilisation actions for Day 1 through Week 2...',
+  'Identifying artefacts, risks, issues, and stakeholder groups...',
+  'Preparing executive-readable delivery visibility...',
+  'Structuring the execution workspace...',
 ]
 
 export function AnalyzingScreen({ mandate }: { mandate: MandateInput }) {
@@ -24,7 +22,7 @@ export function AnalyzingScreen({ mandate }: { mandate: MandateInput }) {
   return (
     <div className="min-h-screen bg-[#060D18] flex items-center justify-center">
       <div className="text-center max-w-sm px-6">
-        <div className="text-xs font-mono text-amber-500 tracking-widest mb-4">ANALYZING MANDATE</div>
+        <div className="text-xs font-mono text-amber-500 tracking-widest mb-4">BUILDING MOBILISATION BRIEF</div>
         <div className="text-2xl font-black text-white mb-1 font-display">
           {mandate.engagementName || 'Engagement'}
         </div>
@@ -45,7 +43,7 @@ export function AnalyzingScreen({ mandate }: { mandate: MandateInput }) {
           ))}
         </div>
         <div className="text-xs font-mono text-gray-800">
-          PMBoK 7th Ed. · Standard for Program Management 4th Ed.
+          Architecture intent {'->'} governed delivery execution
         </div>
       </div>
     </div>

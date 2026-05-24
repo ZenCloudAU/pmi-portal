@@ -1,208 +1,137 @@
 # PMI Portal
 
-> **AI-powered Project & Program Management Portal**  
-> PMBoK 7th Edition · Standard for Program Management 4th Ed. · PMP · PgMP  
-> Built by ZenCloud Consulting
+PMI Portal is an AI-assisted project and programme mobilisation portal for intake, governance, delivery planning, execution visibility, and architecture-led delivery control.
 
----
+## Purpose
 
-## What It Is
+PMI Portal exists to turn an engagement mandate into a structured delivery starting point. It helps capture the initial context, classify the work, identify governance needs, and create a practical workspace for delivery planning and control.
 
-Walk in on Day 1 of any engagement — project, program, or portfolio component, any scale from $10K to $500M+ — describe the mandate, and receive an immediately actionable, PMI-certified playbook: what to do, in what order, grounded in which PMI standard.
+The portal supports the StudioSix delivery ecosystem by connecting architecture decisions to project and programme mobilisation, governance checkpoints, and execution visibility.
 
-The portal does not guess. It applies PMBoK 7th Edition performance domains, process groups, and the Standard for Program Management 4th Ed. directly to the mandate as given.
+## Who It Is For
 
----
+- Project managers and programme managers starting a new engagement.
+- Delivery leads who need a practical Day 1 mobilisation structure.
+- Enterprise architects and solution architects who need delivery governance to stay connected to architecture intent.
+- Consultants preparing an intake, briefing, project charter, risk view, stakeholder map, or delivery workspace.
+- Sponsors and reviewers who need clearer visibility across delivery controls.
 
-## Screens
+## What It Does
 
-```
-Intake → Analyzing → Briefing Room → Workspace
-```
+Based on the current repository content, PMI Portal provides:
 
-| Screen | Purpose |
-|--------|---------|
-| **Intake** | Capture the mandate: client, type, budget scale, duration, sector, free-text mandate |
-| **Analyzing** | Claude API processes the mandate against the full PMI framework |
-| **Briefing Room** | PMI-certified analysis: classification, complexity, lifecycle, Day 1 action plan, all 8 performance domains, required documents, governance, stakeholder map, risk categories, tailoring guidance |
-| **Workspace** | 8 working views — Briefing, Charter, Schedule, Stakeholders, Risk Register, Cost & Budget, Meetings, Deliverables — all seeded from the analysis |
+- Engagement mandate intake for project, programme, or portfolio-component work.
+- AI-assisted mandate analysis using the configured Anthropic integration.
+- Briefing room output for classification, complexity, lifecycle, immediate actions, governance, stakeholders, risks, tailoring, and required documents.
+- Workspace views for briefing, charter, schedule, stakeholders, risk register, cost and budget, meetings, and deliverables.
+- Demo mandate support through the included Volvo example data.
+- Typed project file concepts for future per-engagement JSON persistence.
 
----
+The current flow is:
 
-## PMI Framework Coverage
-
-| Standard | Coverage |
-|---|---|
-| PMBoK 7th Ed. | All 12 Principles · All 8 Performance Domains |
-| Standard for Program Management 4th Ed. | Benefits Realisation · Governance · Component Oversight |
-| PMI Practice Guides | Risk · Agile · Scheduling · Benefits Realisation referenced in tailoring |
-| PMI Code of Ethics | Professional conduct applied throughout |
-
----
-
-## Workspace Views
-
-| View | PMI Alignment |
-|---|---|
-| Briefing | Classification · Lifecycle · Tailoring guidance |
-| Charter | Initiating Process Group · Project/Program Charter |
-| Schedule | Planning Performance Domain · Gantt scaffold · Milestone tracker |
-| Stakeholders | Stakeholder Performance Domain · Power/Interest matrix · Register |
-| Risk Register | Uncertainty Performance Domain · Risk register with P×I scoring |
-| Cost & Budget | Planning Knowledge Area · Budget framework · EVM guidance · Invoice schedule |
-| Meetings | Communications Performance Domain · Cadence · Comms matrix |
-| Deliverables | Delivery Performance Domain · Document register with priority and status |
-
----
-
-## Project Files
-
-Each engagement persists as a typed JSON file in `/projects/`:
-
-```
-projects/
-  VOL-2026-001.json    ← Volvo demo seed
-  <engagement-id>.json ← Future engagements
+```text
+Intake -> Analyzing -> Briefing Room -> Workspace
 ```
 
-Schema defined in `src/types/index.ts` → `ProjectFile`.
+## Live Demo
 
----
+[PMI Portal live demo](https://zencloudau.github.io/pmi-portal/)
 
-## Repo Structure
+## Screenshots
 
-```
-pmi-portal/
-├── src/
-│   ├── App.tsx                  ← Screen router
-│   ├── main.tsx
-│   ├── index.css
-│   ├── components/
-│   │   └── ui.tsx               ← Badge, Card, SectionHead, FieldInput, FieldSelect
-│   ├── views/
-│   │   ├── IntakeScreen.tsx
-│   │   ├── AnalyzingScreen.tsx
-│   │   ├── BriefingRoom.tsx
-│   │   └── Workspace.tsx        ← 8-view workspace shell + all sub-views
-│   ├── hooks/
-│   │   └── useMandate.ts        ← Claude API service
-│   ├── types/
-│   │   └── index.ts             ← All TypeScript types
-│   ├── data/
-│   │   ├── constants.ts         ← PMI prompt, lookup maps, domain lists
-│   │   └── demos.ts             ← Seeded demo mandates
-│   └── utils/                   ← Helpers (date, ID generation, export)
-├── projects/                    ← Per-engagement JSON files
-├── docs/
-│   └── ADR-001-tech-stack.md
-├── .github/
-│   ├── workflows/ci.yml
-│   └── ISSUE_TEMPLATE/
-├── .env.example
-├── .gitignore
-├── index.html
-├── package.json
-├── tailwind.config.js
-├── tsconfig.json
-└── vite.config.ts
+### Delivery mobilisation overview
+
+![PMI Portal delivery mobilisation overview](docs/screenshots/pmi-portal-home.png)
+
+### Intake and mobilisation
+
+![PMI Portal intake and mobilisation](docs/screenshots/pmi-portal-intake.png)
+
+### Governance and execution visibility
+
+![PMI Portal governance and execution visibility](docs/screenshots/pmi-portal-dashboard.png)
+
+## How It Fits the StudioSix / VAF Ecosystem
+
+PMI Portal is the delivery mobilisation and governance layer of the StudioSix ecosystem.
+
+It fits the delivery chain as:
+
+```text
+Architecture -> Governance -> Mobilisation -> Artefacts -> Execution -> Delivery visibility
 ```
 
----
+- **StudioSix** provides the commercial delivery wrapper.
+- **Velocity Architecture Framework** provides architecture and governance framing.
+- **VAF-SA** provides the solution architecture practitioner method.
+- **EA Artefact Generator** supports structured architecture artefact production.
+- **PMI Portal** connects architecture intent to mobilisation, governance, planning, and execution visibility.
+- **Agentic Cert** and **Learn with Claude** support learning, certification, and builder capability around the ecosystem.
 
-## Getting Started
+PMI Portal is not positioned as a replacement for professional project management judgement. It is a structured support tool for intake, mobilisation, and governance-oriented delivery control.
 
-### Prerequisites
+## Tech Stack
 
-- Node.js 20+
-- Anthropic API key ([console.anthropic.com](https://console.anthropic.com/))
+Confirmed from the current files:
 
-### Install
+- React 18
+- TypeScript
+- Vite 5
+- Tailwind CSS
+- Recharts
+- Lucide React
+- ESLint
+- GitHub Actions deployment to GitHub Pages
+- Anthropic API integration through `VITE_ANTHROPIC_API_KEY`
+
+## How to Run Locally
+
+Commands confirmed from `package.json`:
 
 ```bash
-git clone https://github.com/ZenCloudAU/pmi-portal.git
-cd pmi-portal
 npm install
-```
-
-### Configure
-
-```bash
-cp .env.example .env
-# Add your Anthropic API key to .env
-```
-
-### Run
-
-```bash
 npm run dev
-# → http://localhost:5173
 ```
 
-### Build
+Build and validation scripts:
 
 ```bash
 npm run build
-# Output: dist/
+npm run preview
+npm run lint
+npm run type-check
 ```
 
----
+Environment configuration:
+
+```bash
+cp .env.example .env
+```
+
+Add the required Anthropic API key value to the local `.env` file. Do not commit local environment files.
+
+## Project Status
+
+Prototype.
+
+The repository has a working React/Vite structure, typed application flow, GitHub Pages deployment configuration, and a live public URL. It is not yet product-ready because it still needs clearer screenshots, stronger public packaging, safer production API handling, and evidence of the full workflow operating reliably outside demo use.
 
 ## Roadmap
 
-### v0.1 — Current (Artifact / Scaffold)
-- [x] 4-screen flow: Intake → Analyzing → Briefing Room → Workspace
-- [x] Claude API mandate analysis (PMBoK 7th + Standard for PgM 4th)
-- [x] 8 workspace views (Charter, Schedule, Stakeholders, Risk, Budget, Meetings, Deliverables)
-- [x] TypeScript types and repo scaffold
-- [x] Demo seed: Volvo VOL-2026-001
+Near-term improvements:
 
-### v0.2 — View Migration
-- [ ] Migrate all view JSX from artifact into typed `.tsx` modules
-- [ ] Wire `VITE_ANTHROPIC_API_KEY` from environment
-- [ ] Export/import `ProjectFile` as JSON
-- [ ] Load existing project from `/projects/*.json` on intake screen
+- Add additional screenshots after briefing room and workspace states are available without local API configuration.
+- Clarify demo-only versus configured-AI behaviour on the public site.
+- Add export/import handling for project files.
+- Strengthen project charter, risk register, stakeholder, and deliverables outputs.
+- Define the handoff contract between PMI Portal, VAF, and EA Artefact Generator.
+- Add client-safe case study examples without exposing confidential delivery information.
 
-### v0.3 — Document Generation
-- [ ] Export Project Charter as DOCX
-- [ ] Export Risk Register as XLSX
-- [ ] Weekly Status Report PDF template
-- [ ] Lessons Learned register export
+## Security and Data Notes
 
-### v0.4 — Schedule Integration
-- [ ] MS Project XML export from schedule view
-- [ ] Gantt editor (editable tasks, owners, dates)
-- [ ] Milestone date picker
+The current repository includes an Anthropic API integration path and an `.env.example` file. Local secrets should remain in `.env` or deployment secrets and must not be committed.
 
-### v0.5 — Valor Integration
-- [ ] Wire to VAF Agentic Architect v2 (velocity-architecture repo)
-- [ ] Mandate → VAF context handoff
-- [ ] Shared project schema
-
-### v1.0 — Multi-Engagement
-- [ ] Project list / portfolio dashboard
-- [ ] Multi-tenancy (client-scoped workspaces)
-- [ ] Backend persistence (Supabase or Azure Cosmos)
-
----
-
-## Connection to VAF / ZenCloud Stack
-
-This repo is standalone but designed to integrate with the ZenCloud Velocity Architecture Framework:
-
-```
-velocity-architecture/       ← VAF Agentic Architect v2 (Azure, TypeScript, claude-sonnet)
-pmi-portal/                  ← This repo — PM governance layer
-```
-
-Integration point: `ProjectFile` JSON schema acts as the handoff contract between PM governance and VAF technical execution.
-
----
-
-## Contributing
-
-Issues use PMI-aligned templates (see `.github/ISSUE_TEMPLATE/`). All features must cite a PMI standard, practice guide, or principle as the basis for inclusion.
-
----
+The public demo should be treated as a prototype and demonstration environment. Users should avoid entering confidential client, commercial, personal, or regulated data unless the deployment has been explicitly reviewed and approved for that use.
 
 ## License
 
