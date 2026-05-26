@@ -38,7 +38,7 @@ function WBriefing({ analysis, mandate }: { analysis: MandateAnalysis; mandate: 
           {day12.map((a, i) => (
             <div key={i} className="flex items-start gap-3">
               <div className={`text-xs font-mono px-2 py-0.5 rounded border flex-shrink-0 mt-0.5 ${
-                a.timing === 'Day 1' ? 'border-red-500/40 text-red-400 bg-red-500/10' : 'border-sky-200 text-sky-700 bg-sky-50'
+                a.timing === 'Day 1' ? 'border-red-500/40 text-red-400 bg-red-500/10' : 'border-sky-200 text-orange-700 bg-sky-50'
               }`}>{a.timing}</div>
               <div className="flex-1">
                 <div className="text-xs text-slate-700 leading-tight">{a.action}</div>
@@ -54,7 +54,7 @@ function WBriefing({ analysis, mandate }: { analysis: MandateAnalysis; mandate: 
         <p className="text-sm text-slate-600 leading-relaxed">{analysis.tailoring}</p>
         {analysis.programNotes && (
           <div className="mt-4 pt-4 border-t border-slate-200">
-            <div className="text-xs font-mono text-sky-700 tracking-widest mb-2">Programme Governance Notes</div>
+            <div className="text-xs font-mono text-orange-700 tracking-widest mb-2">Programme Governance Notes</div>
             <p className="text-sm text-slate-600 leading-relaxed">{analysis.programNotes}</p>
           </div>
         )}
@@ -106,7 +106,7 @@ function WCharter({ mandate, analysis }: { mandate: MandateInput; analysis: Mand
       {sections.map(s => (
         <div key={s.k} className="border border-slate-200 rounded-lg overflow-hidden bg-white">
           <div className="px-4 py-2 border-b border-slate-200 bg-slate-100">
-            <span className="text-xs font-mono text-sky-700 tracking-wider">{s.label.toUpperCase()}</span>
+            <span className="text-xs font-mono text-orange-700 tracking-wider">{s.label.toUpperCase()}</span>
           </div>
           <textarea
             rows={4}
@@ -173,7 +173,7 @@ function WSchedule({ analysis }: { analysis: MandateAnalysis }) {
         <div className="space-y-2">
           {criticals.map((a, i) => (
             <div key={i} className="flex items-center gap-3">
-              <div className="w-1.5 h-1.5 rounded-full bg-sky-600 flex-shrink-0" />
+              <div className="w-1.5 h-1.5 rounded-full bg-orange-600 flex-shrink-0" />
               <span className="text-xs text-slate-600 flex-1 leading-tight">{a.action}</span>
               <span className="text-xs font-mono text-slate-500">{a.timing}</span>
             </div>
@@ -223,7 +223,7 @@ function WStakeholders({ analysis }: { analysis: MandateAnalysis }) {
         {quadrants.map(q => (
           <div key={q.label} className="border border-slate-200 p-3 bg-white/60">
             <div className="text-xs font-mono text-slate-500 mb-1">{q.label}</div>
-            <div className="text-xs text-sky-700 mb-2">→ {q.strategy}</div>
+            <div className="text-xs text-orange-700 mb-2">→ {q.strategy}</div>
             {rows.filter(r => r.strategy === q.strategy).map(r => (
               <div key={r.id} className="text-xs text-slate-500">{r.name || r.group}</div>
             ))}
@@ -301,8 +301,8 @@ function WRisks({ analysis }: { analysis: MandateAnalysis }) {
       {risks.map(r => (
         <Card key={r.id} className="p-4">
           <div className="flex items-center gap-2 mb-3">
-            <AlertTriangle size={12} className="text-sky-600" />
-            <span className="text-xs font-mono text-sky-700">{r.category}</span>
+            <AlertTriangle size={12} className="text-orange-600" />
+            <span className="text-xs font-mono text-orange-700">{r.category}</span>
             {r.score && <Badge label={r.score} variant={{ Critical: 'red', High: 'amber', Medium: 'blue', Low: 'green' }[r.score] as 'red' | 'amber' | 'blue' | 'green' ?? 'gray'} />}
           </div>
           <div className="grid grid-cols-2 gap-3 mb-3">
@@ -340,7 +340,7 @@ function WRisks({ analysis }: { analysis: MandateAnalysis }) {
       ))}
       <button
         onClick={() => setRisks(p => [...p, { id: Date.now(), category: 'New Risk Category', description: '', probability: '', impact: '', score: '', mitigation: '', status: 'Open' }])}
-        className="w-full border border-dashed border-slate-200 hover:border-sky-300 rounded p-3 text-xs font-mono text-slate-500 hover:text-sky-700 transition-all"
+        className="w-full border border-dashed border-slate-200 hover:border-orange-300 rounded p-3 text-xs font-mono text-slate-500 hover:text-orange-700 transition-all"
       >
         + Add Risk
       </button>
@@ -362,7 +362,7 @@ function WBudget({ mandate, analysis }: { mandate: MandateInput; analysis: Manda
         ].map(c => (
           <Card key={c.label} accent className="p-4">
             <div className="text-xs font-mono text-slate-500 mb-1">{c.label.toUpperCase()}</div>
-            <div className="text-xl font-bold font-mono text-sky-700">{c.value}</div>
+            <div className="text-xl font-bold font-mono text-orange-700">{c.value}</div>
           </Card>
         ))}
       </div>
@@ -384,7 +384,7 @@ function WBudget({ mandate, analysis }: { mandate: MandateInput; analysis: Manda
             { tier: 'Steering / Board',desc: 'Full governance review',      ph: 'e.g. > 15% or > $X' },
           ].map(t => (
             <div key={t.tier} className="border border-slate-200 rounded p-3">
-              <div className="text-xs font-mono text-sky-700 mb-0.5">{t.tier.toUpperCase()}</div>
+              <div className="text-xs font-mono text-orange-700 mb-0.5">{t.tier.toUpperCase()}</div>
               <div className="text-xs text-slate-500 mb-2">{t.desc}</div>
               <input className="w-full bg-white border border-slate-200 rounded px-2 py-1 text-xs text-slate-600 focus:outline-none" placeholder={t.ph} />
             </div>
@@ -416,7 +416,7 @@ function WMeetings({ analysis }: { analysis: MandateAnalysis }) {
         <div className="space-y-2">
           {cadence.map((m, i) => (
             <div key={i} className="flex items-start gap-3 border border-slate-200/50 rounded p-3 hover:bg-slate-50 transition-colors">
-              <MessageSquare size={12} className="text-sky-700 flex-shrink-0 mt-0.5" />
+              <MessageSquare size={12} className="text-orange-700 flex-shrink-0 mt-0.5" />
               <div className="flex-1">
                 <div className="text-xs text-slate-950 font-medium">{m.name}</div>
                 <div className="text-xs text-slate-500 leading-tight">{m.desc}</div>
@@ -548,15 +548,15 @@ export function Workspace({ mandate, analysis, onReset }: WorkspaceProps) {
       {sidebar && (
         <aside className="w-52 flex-shrink-0 border-r border-slate-200 flex flex-col bg-slate-50">
           <div className="p-4 border-b border-slate-200">
-            <div className="text-xs font-mono text-sky-700 tracking-widest">DELIVERY CONTROL</div>
+            <div className="text-xs font-mono text-orange-700 tracking-widest">DELIVERY CONTROL</div>
             <div className="text-sm font-black text-slate-950 tracking-widest font-display">PMO PORTAL</div>
           </div>
-          <div className="p-3 border-b border-slate-200 bg-sky-50">
-            <div className="text-xs font-mono text-sky-700 truncate">{mandate.client}</div>
+          <div className="p-3 border-b border-slate-200 bg-orange-50/60">
+            <div className="text-xs font-mono text-orange-700 truncate">{mandate.client}</div>
             <div className="text-xs text-slate-500 truncate mt-0.5 leading-tight">{mandate.engagementName}</div>
             <div className="flex items-center gap-1.5 mt-1.5">
-              <div className="w-1.5 h-1.5 rounded-full bg-sky-600 animate-pulse" />
-              <span className="text-xs font-mono text-sky-700">{analysis.classification}</span>
+              <div className="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse" />
+              <span className="text-xs font-mono text-orange-700">{analysis.classification}</span>
             </div>
           </div>
           <nav className="flex-1 p-2 space-y-0.5 overflow-y-auto">
@@ -566,7 +566,7 @@ export function Workspace({ mandate, analysis, onReset }: WorkspaceProps) {
               return (
                 <button key={v.id} onClick={() => setView(v.id)}
                   className={`w-full flex items-center gap-2.5 px-3 py-2 rounded text-left text-xs border transition-all ${
-                    active ? 'bg-sky-50 text-sky-700 border-sky-200' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100 border-transparent'
+                    active ? 'bg-orange-50 text-orange-700 border-orange-200' : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100 border-transparent'
                   }`}>
                   <Icon size={13} /> {v.label}
                 </button>

@@ -22,7 +22,7 @@ export function AnalyzingScreen({ mandate }: { mandate: MandateInput }) {
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center text-slate-900">
       <div className="text-center max-w-sm px-6">
-        <div className="text-xs font-mono text-sky-700 tracking-widest mb-4">BUILDING MOBILISATION BRIEF</div>
+        <div className="text-xs font-mono text-orange-700 tracking-widest mb-4">BUILDING MOBILISATION BRIEF</div>
         <div className="text-2xl font-black text-slate-950 mb-1 font-display">
           {mandate.engagementName || 'Engagement'}
         </div>
@@ -35,7 +35,7 @@ export function AnalyzingScreen({ mandate }: { mandate: MandateInput }) {
             >
               <div
                 className={`w-1.5 h-1.5 rounded-full flex-shrink-0 transition-all ${
-                  i < step ? 'bg-sky-600' : i === step ? 'bg-sky-600 animate-pulse' : 'bg-slate-300'
+                  i < step ? 'bg-orange-600' : i === step ? 'bg-orange-600 animate-pulse' : 'bg-slate-300'
                 }`}
               />
               {s}

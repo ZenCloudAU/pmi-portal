@@ -46,7 +46,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
     <div className="min-h-screen bg-slate-50 flex flex-col text-slate-900">
       <header className="border-b border-slate-200 bg-white px-6 py-3.5 flex items-center gap-4 flex-shrink-0 shadow-sm">
         <div className="flex-1">
-          <div className="text-xs font-mono text-sky-700 tracking-widest">DELIVERY MOBILISATION BRIEF</div>
+          <div className="text-xs font-mono text-orange-700 tracking-widest">DELIVERY MOBILISATION BRIEF</div>
           <div className="text-sm font-bold text-slate-950 font-display" style={{ letterSpacing: '0.04em' }}>
             {mandate.engagementName}
           </div>
@@ -65,7 +65,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
         <Card accent className="p-5">
           <div className="flex items-start justify-between gap-4 mb-3">
             <div>
-              <div className="text-xs font-mono text-sky-700 tracking-widest mb-1">
+              <div className="text-xs font-mono text-orange-700 tracking-widest mb-1">
                 {mandate.client} · {mandate.location || 'Location TBC'}
               </div>
               <div className="text-xl font-black text-slate-950 leading-none font-display">
@@ -84,15 +84,15 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
         {/* Day 1 Action Plan */}
         <Card>
           <div className="px-5 py-3 border-b border-slate-200 flex items-center gap-2">
-            <Target size={13} className="text-sky-600" />
-              <div className="text-xs font-mono text-sky-700 tracking-widest">RECOMMENDED NEXT ACTIONS — DAY 1 TO WEEK 2</div>
+            <Target size={13} className="text-orange-600" />
+              <div className="text-xs font-mono text-orange-700 tracking-widest">RECOMMENDED NEXT ACTIONS — DAY 1 TO WEEK 2</div>
           </div>
           <div className="divide-y divide-slate-100">
             {sorted.map((a, i) => (
               <div key={i} className="flex items-start gap-4 px-5 py-3.5 hover:bg-slate-50 transition-colors">
                 <div className={`text-xs font-mono px-2 py-0.5 rounded border flex-shrink-0 mt-0.5 ${
                   a.timing === 'Day 1' ? 'border-red-500/40 text-red-400 bg-red-500/10' :
-                  a.timing === 'Day 2' ? 'border-sky-200 text-sky-700 bg-sky-50' :
+                  a.timing === 'Day 2' ? 'border-sky-200 text-orange-700 bg-sky-50' :
                   'border-blue-500/30 text-blue-400 bg-blue-500/10'
                 }`}>
                   {a.timing}
@@ -118,7 +118,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
                 const Icon = domainIcon(pd.domain)
                 return (
                   <div key={i} className="flex items-center gap-3">
-                    <Icon size={11} className={pd.priority === 'High' ? 'text-sky-700' : pd.priority === 'Medium' ? 'text-sky-500' : 'text-slate-400'} />
+                    <Icon size={11} className={pd.priority === 'High' ? 'text-orange-700' : pd.priority === 'Medium' ? 'text-sky-500' : 'text-slate-400'} />
                     <span className={`text-xs flex-1 ${pd.priority === 'High' ? 'text-slate-800' : pd.priority === 'Medium' ? 'text-slate-600' : 'text-slate-500'}`}>
                       {pd.domain}
                     </span>
@@ -199,7 +199,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
           <p className="text-sm text-slate-600 leading-relaxed">{analysis.tailoring}</p>
           {analysis.programNotes && (
             <div className="mt-4 border-t border-slate-200 pt-4">
-              <div className="text-xs font-mono text-sky-700 tracking-widest mb-2">Programme Governance Notes</div>
+              <div className="text-xs font-mono text-orange-700 tracking-widest mb-2">Programme Governance Notes</div>
               <p className="text-sm text-slate-600 leading-relaxed">{analysis.programNotes}</p>
             </div>
           )}

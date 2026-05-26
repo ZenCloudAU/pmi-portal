@@ -462,7 +462,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
               value={search}
               onChange={event => setSearch(event.target.value)}
               placeholder="Search artefacts, owners, categories"
-              className="w-full rounded border border-slate-200 bg-white py-2 pl-9 pr-3 text-sm text-slate-900 focus:border-sky-400 focus:outline-none"
+              className="w-full rounded border border-slate-200 bg-white py-2 pl-9 pr-3 text-sm text-slate-900 focus:border-orange-500 focus:outline-none"
             />
           </label>
           <SelectFilter value={categoryFilter} onChange={setCategoryFilter} options={['All', ...Array.from(new Set(artefacts.map(a => a.category)))]} />
@@ -618,7 +618,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
         </div>
       </header>
 
-      <div className="mx-auto grid max-w-[1500px] grid-cols-1 lg:grid-cols-[260px_1fr_300px]">
+      <div className="mx-auto grid max-w-[1500px] grid-cols-1 lg:grid-cols-[260px_1fr]">
         <aside className={`${mobileNavOpen ? 'block' : 'hidden'} border-b border-slate-200 bg-slate-50 p-4 lg:sticky lg:top-[73px] lg:block lg:h-[calc(100vh-73px)] lg:border-b-0 lg:border-r`}>
           <div className="mb-4 rounded border-l-4 border-orange-600 bg-white p-4 shadow-sm">
             <div className="text-xs font-mono tracking-widest text-orange-700">VAF-ALIGNED WORKSPACE</div>
@@ -648,36 +648,20 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
         <main className="min-w-0 px-4 py-5 lg:px-6">
           <div className="mb-4 rounded border border-slate-200 bg-white px-4 py-3 shadow-sm">
             <div className="flex flex-wrap items-center gap-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-slate-500">Active module</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-slate-500">Module</span>
               <strong className="text-sm text-slate-950">{activeLabel}</strong>
-              <span className="ml-auto text-xs font-mono text-slate-500">{SHORT_WORKFLOW}</span>
+              <div className="ml-auto flex items-center gap-3 text-xs font-mono text-slate-400">
+                <span>{engagementScale}</span>
+                <span className="text-slate-200">·</span>
+                <span>{completion}% complete</span>
+                <span className="text-slate-200">·</span>
+                <span>{artefacts.length} artefacts</span>
+              </div>
             </div>
           </div>
           {moduleContent[activeModule]}
         </main>
 
-        <aside className="border-t border-slate-200 bg-slate-50 p-4 lg:sticky lg:top-[73px] lg:block lg:h-[calc(100vh-73px)] lg:border-l lg:border-t-0">
-          <div className="space-y-4">
-            <Card className="p-4">
-              <div className="text-xs font-mono tracking-widest text-slate-500">RIGHT SUMMARY</div>
-              <div className="mt-2 font-display text-2xl font-black text-slate-950">
-                {mandate.engagementName || 'ERP Consolidation Programme'}
-              </div>
-              <p className="mt-2 text-sm text-slate-600">{mandate.client || 'Fictional Manufacturing Group'}</p>
-            </Card>
-            <Metric label="Active module" value={activeLabel} icon={Target} />
-            <Metric label="Selected scale" value={engagementScale} icon={Scale} />
-            <Metric label="Current phase" value="Mobilisation" icon={Layers} />
-            <Metric label="Artefact completion" value={`${completion}%`} icon={BarChart2} />
-            <Card accent className="border-orange-200 bg-orange-50/60 p-4">
-              <div className="text-xs font-mono tracking-widest text-orange-700">PRIVATE STORAGE WARNING</div>
-              <p className="mt-2 text-sm leading-relaxed text-slate-700">
-                Public demo only. Real engagement artefacts must be exported to a private client workspace,
-                private repository, or approved client document store.
-              </p>
-            </Card>
-          </div>
-        </aside>
       </div>
     </div>
   )
@@ -779,7 +763,7 @@ function SelectFilter({ value, onChange, options }: { value: string; onChange: (
     <select
       value={value}
       onChange={event => onChange(event.target.value)}
-      className="rounded border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-sky-400 focus:outline-none"
+      className="rounded border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 focus:border-orange-500 focus:outline-none"
     >
       {options.map(option => <option key={option} value={option}>{option}</option>)}
     </select>
