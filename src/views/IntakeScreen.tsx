@@ -86,7 +86,6 @@ interface NavItem {
 }
 
 const WORKFLOW = 'Architecture → Governance → Mobilisation → Artefacts → Execution → Delivery visibility'
-const SHORT_WORKFLOW = 'Intake → Architecture → Scale → Artefacts → Governance → Execution → Handover'
 const STORAGE_FLOW = 'Generate → Preview → Review → Export → Store privately → Share authorised artefacts → Lock records'
 
 const NAV_ITEMS: NavItem[] = [
