@@ -329,8 +329,8 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
     overview: (
       <ModuleShell eyebrow="Executive overview" title="Summary first. Detail on selection." icon={Target}>
         <div className="grid grid-cols-1 gap-4 xl:grid-cols-[1.2fr_0.8fr]">
-          <Card accent className="border-amber-200 bg-amber-50/50 p-5">
-            <div className="text-xs font-mono uppercase tracking-widest text-amber-700">Demo workspace output</div>
+          <Card accent className="border-orange-200 bg-orange-50/50 p-5">
+            <div className="text-xs font-mono uppercase tracking-widest text-orange-700">Demo workspace output</div>
             <h2 className="mt-2 font-display text-3xl font-black leading-tight text-slate-950">
               {mandate.engagementName || 'ERP Consolidation Programme'}
             </h2>
@@ -346,7 +346,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
               <button onClick={() => openModule('intake')} className="rounded bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
                 Open Intake
               </button>
-              <button onClick={() => openModule('artefact-catalogue')} className="rounded border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-amber-500">
+              <button onClick={() => openModule('artefact-catalogue')} className="rounded border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:border-orange-500">
                 View Artefact Catalogue
               </button>
             </div>
@@ -402,7 +402,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
           <button onClick={generateWorkspace} className="inline-flex items-center gap-2 rounded bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white hover:bg-slate-800">
             Generate delivery workspace <ArrowRight size={14} />
           </button>
-          <button onClick={loadDemoWorkspace} className="rounded border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-700 hover:border-amber-500 hover:text-slate-950">
+          <button onClick={loadDemoWorkspace} className="rounded border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-700 hover:border-orange-500 hover:text-slate-950">
             Load sample workspace
           </button>
         </div>
@@ -435,7 +435,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
             <button
               key={scale}
               onClick={() => setEngagementScale(scale)}
-              className={`border-l-4 p-4 text-left shadow-sm transition-colors ${engagementScale === scale ? 'border-amber-600 bg-amber-50' : 'border-slate-200 bg-white hover:border-blue-600'}`}
+              className={`border-l-4 p-4 text-left shadow-sm transition-colors ${engagementScale === scale ? 'border-orange-600 bg-orange-50' : 'border-slate-200 bg-white hover:border-blue-600'}`}
             >
               <div className="text-sm font-bold text-slate-950">{scale}</div>
               <div className="mt-1 text-xs text-slate-500">{artefactsForScale(scale).length} artefacts</div>
@@ -498,7 +498,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
         </div>
         <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-3">
           {['Preview', 'Generate draft', 'Export controlled artefact'].map(mode => (
-            <div key={mode} className="rounded border-l-4 border-amber-600 bg-slate-50 p-3 text-sm font-semibold text-slate-800">{mode}</div>
+            <div key={mode} className="rounded border-l-4 border-orange-600 bg-slate-50 p-3 text-sm font-semibold text-slate-800">{mode}</div>
           ))}
         </div>
         <p className="mt-4 text-sm leading-relaxed text-slate-600">
@@ -537,7 +537,7 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
         <div className="grid gap-2">
           {['Intake', 'Mobilisation', 'Governance setup', 'Architecture review', 'Delivery planning', 'Execution checkpoints', 'Executive reviews', 'Handover'].map((milestone, index) => (
             <div key={milestone} className="flex items-center gap-3 rounded border border-slate-200 bg-white p-3">
-              <span className="font-mono text-xs text-amber-700">{String(index + 1).padStart(2, '0')}</span>
+              <span className="font-mono text-xs text-orange-700">{String(index + 1).padStart(2, '0')}</span>
               <span className="text-sm font-semibold text-slate-800">{milestone}</span>
               <span className="ml-auto text-xs text-slate-500">{index < 2 ? 'Active' : 'Planned'}</span>
             </div>
@@ -620,8 +620,8 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
 
       <div className="mx-auto grid max-w-[1500px] grid-cols-1 lg:grid-cols-[260px_1fr_300px]">
         <aside className={`${mobileNavOpen ? 'block' : 'hidden'} border-b border-slate-200 bg-slate-50 p-4 lg:sticky lg:top-[73px] lg:block lg:h-[calc(100vh-73px)] lg:border-b-0 lg:border-r`}>
-          <div className="mb-4 rounded border-l-4 border-amber-600 bg-white p-4 shadow-sm">
-            <div className="text-xs font-mono tracking-widest text-amber-700">VAF-ALIGNED WORKSPACE</div>
+          <div className="mb-4 rounded border-l-4 border-orange-600 bg-white p-4 shadow-sm">
+            <div className="text-xs font-mono tracking-widest text-orange-700">VAF-ALIGNED WORKSPACE</div>
             <p className="mt-2 text-sm leading-relaxed text-slate-600">One module at a time. Summary first. Detail on selection.</p>
           </div>
           <nav className="space-y-1">
@@ -633,11 +633,11 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
                   onClick={() => openModule(id)}
                   className={`flex w-full items-center gap-2 rounded border px-3 py-2 text-left text-sm transition-colors ${
                     active
-                      ? 'border-amber-200 bg-amber-50 text-slate-950'
+                      ? 'border-orange-200 bg-orange-50 text-slate-950'
                       : 'border-transparent text-slate-600 hover:border-slate-200 hover:bg-white hover:text-slate-950'
                   }`}
                 >
-                  <Icon size={15} className={active ? 'text-amber-700' : 'text-slate-400'} />
+                  <Icon size={15} className={active ? 'text-orange-700' : 'text-slate-400'} />
                   {label}
                 </button>
               )
@@ -669,8 +669,8 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
             <Metric label="Selected scale" value={engagementScale} icon={Scale} />
             <Metric label="Current phase" value="Mobilisation" icon={Layers} />
             <Metric label="Artefact completion" value={`${completion}%`} icon={BarChart2} />
-            <Card accent className="border-amber-200 bg-amber-50/60 p-4">
-              <div className="text-xs font-mono tracking-widest text-amber-700">PRIVATE STORAGE WARNING</div>
+            <Card accent className="border-orange-200 bg-orange-50/60 p-4">
+              <div className="text-xs font-mono tracking-widest text-orange-700">PRIVATE STORAGE WARNING</div>
               <p className="mt-2 text-sm leading-relaxed text-slate-700">
                 Public demo only. Real engagement artefacts must be exported to a private client workspace,
                 private repository, or approved client document store.
@@ -685,13 +685,13 @@ export function IntakeScreen({ mandate, setMandate, onAnalyze: _onAnalyze, onLoa
 
 function ModuleShell({ eyebrow, title, icon: Icon, children }: { eyebrow: string; title: string; icon: LucideIcon; children: ReactNode }) {
   return (
-    <section className="rounded border-l-4 border-amber-600 border-y border-r border-slate-200 bg-white p-5 shadow-sm">
+    <section className="rounded border-l-4 border-orange-600 border-y border-r border-slate-200 bg-white p-5 shadow-sm">
       <div className="mb-5 flex items-start gap-3">
-        <div className="rounded border border-amber-200 bg-amber-50 p-2 text-amber-700">
+        <div className="rounded border border-orange-200 bg-orange-50 p-2 text-orange-700">
           <Icon size={18} />
         </div>
         <div>
-          <div className="text-xs font-mono uppercase tracking-widest text-amber-700">{eyebrow}</div>
+          <div className="text-xs font-mono uppercase tracking-widest text-orange-700">{eyebrow}</div>
           <h1 className="font-display text-3xl font-black leading-tight text-slate-950">{title}</h1>
         </div>
       </div>
@@ -750,7 +750,7 @@ function InfoList({ title, items }: { title: string; items: string[] }) {
       <ul className="mt-3 space-y-2">
         {items.map(item => (
           <li key={item} className="flex gap-2 text-sm text-slate-700">
-            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-600" />
+            <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-orange-600" />
             {item}
           </li>
         ))}
@@ -765,7 +765,7 @@ function TextArea({ label, value, onChange, placeholder, rows }: { label: string
       <span className="block text-xs font-mono uppercase tracking-widest text-slate-500">{label}</span>
       <textarea
         rows={rows}
-        className="mt-1.5 w-full resize-none rounded border border-slate-200 bg-white px-3 py-2.5 text-sm leading-relaxed text-slate-900 placeholder-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-100"
+        className="mt-1.5 w-full resize-none rounded border border-slate-200 bg-white px-3 py-2.5 text-sm leading-relaxed text-slate-900 placeholder-slate-400 focus:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-100"
         placeholder={placeholder}
         value={value}
         onChange={event => onChange(event.target.value)}
@@ -788,7 +788,7 @@ function SelectFilter({ value, onChange, options }: { value: string; onChange: (
 
 function SafetyNote() {
   return (
-    <div className="rounded border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
+    <div className="rounded border border-orange-200 bg-orange-50 px-4 py-3 text-sm leading-relaxed text-slate-700">
       Public demo only. Do not enter confidential, sensitive, or client-identifiable information.
       Real engagement artefacts must be exported to a private controlled workspace.
     </div>

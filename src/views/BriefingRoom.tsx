@@ -54,7 +54,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
         <button onClick={onReset} className="text-xs font-mono text-slate-500 hover:text-slate-800 transition-colors flex items-center gap-1">
           <RotateCcw size={10} /> New Mandate
         </button>
-        <button onClick={onEnterWorkspace} className="flex items-center gap-2 px-4 py-2 rounded text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 transition-all">
+        <button onClick={onEnterWorkspace} className="flex items-center gap-2 px-4 py-2 rounded text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition-all">
           Open Workspace <ArrowRight size={13} />
         </button>
       </header>
@@ -185,7 +185,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
             <div className="space-y-1.5">
               {(analysis.riskCategories ?? []).map((r, i) => (
                 <div key={i} className="flex items-center gap-2">
-                  <AlertTriangle size={10} className="text-amber-600/70 flex-shrink-0" />
+                  <AlertTriangle size={10} className="text-orange-600/70 flex-shrink-0" />
                   <span className="text-xs text-slate-600">{r}</span>
                 </div>
               ))}
@@ -223,7 +223,7 @@ export function BriefingRoom({ mandate, analysis, onEnterWorkspace, onReset }: B
             <div className="text-sm font-semibold text-slate-950">Ready to build the working environment?</div>
             <div className="text-xs text-slate-500 mt-0.5">Charter · Schedule · Stakeholders · Risk Register · Cost · Meetings · Deliverables</div>
           </div>
-          <button onClick={onEnterWorkspace} className="flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold bg-sky-700 text-white hover:bg-sky-800 transition-all flex-shrink-0">
+          <button onClick={onEnterWorkspace} className="flex items-center gap-2 px-5 py-2.5 rounded text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition-all flex-shrink-0">
             Open Workspace <ArrowRight size={14} />
           </button>
         </Card>

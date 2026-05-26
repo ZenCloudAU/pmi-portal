@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"DM Sans"', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        mono: ['"DM Mono"', '"Courier New"', 'monospace'],
         display: ['"Barlow Condensed"', 'sans-serif'],
       },
       colors: {
@@ -17,9 +17,9 @@ export default {
           500: '#243650',
         },
         brand: {
-          DEFAULT: '#E8A020',
-          light:   '#F5B93A',
-          dim:     '#E8A02015',
+          DEFAULT: '#E8630A',
+          light:   '#F0741B',
+          dim:     '#E8630A15',
         },
       },
     },

@@ -5,7 +5,7 @@ import type { ReactNode } from 'react'
 type BadgeVariant = 'amber' | 'red' | 'blue' | 'green' | 'purple' | 'gray'
 
 const BADGE_STYLES: Record<BadgeVariant, string> = {
-  amber:  'bg-amber-50 text-amber-700 border-amber-200',
+  amber:  'bg-orange-50 text-orange-700 border-orange-200',
   red:    'bg-red-50 text-red-700 border-red-200',
   blue:   'bg-sky-50 text-sky-700 border-sky-200',
   green:  'bg-emerald-50 text-emerald-700 border-emerald-200',
@@ -49,7 +49,7 @@ export function Card({
       id={id}
       className={`border rounded-lg ${
         accent
-          ? 'border-sky-200 bg-sky-50/80'
+          ? 'border-orange-200 bg-orange-50/80'
           : 'border-slate-200 bg-white shadow-sm'
       } ${className}`}
     >
@@ -77,7 +77,7 @@ export function FieldInput({
         {label}
       </label>
       <input
-        className="w-full bg-white border border-slate-200 rounded px-3 py-2 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition-colors"
+        className="w-full bg-white border border-slate-200 rounded px-3 py-2 text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition-colors"
         placeholder={placeholder}
         value={value}
         onChange={e => onChange(e.target.value)}
@@ -105,7 +105,7 @@ export function FieldSelect({
         {label}
       </label>
       <select
-        className="w-full bg-white border border-slate-200 rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-sky-400 focus:ring-2 focus:ring-sky-100 transition-colors"
+        className="w-full bg-white border border-slate-200 rounded px-3 py-2 text-sm text-slate-900 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-100 transition-colors"
         value={value}
         onChange={e => onChange(e.target.value)}
       >
