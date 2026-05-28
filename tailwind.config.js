@@ -19,7 +19,16 @@ export default {
         brand: {
           DEFAULT: '#E8630A',
           light:   '#F0741B',
+          hover:   '#CC5508',
           dim:     '#E8630A15',
+        },
+        vaf: {
+          accent:       '#E8630A',
+          'accent-hover': '#CC5508',
+          navy:         '#1E3A5F',
+          'navy-dark':  '#162D4A',
+          border:       '#E2E8F0',
+          text:         '#0F172A',
         },
       },
     },
